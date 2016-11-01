@@ -14,6 +14,7 @@ import forms from '../forms/_.forms';
 import menu from '../menu';
 
 MobxReactFormDevTools.register(forms);
+MobxReactFormDevTools.select('registerMaterial');
 
 const Main = () => (
   <div>
