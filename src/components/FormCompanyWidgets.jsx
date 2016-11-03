@@ -79,7 +79,7 @@ export default observer(({ form }) => (
       <br />
       <div className="ctrl">
         <button type="submit" onClick={form.onSubmit}>
-          <i className="fa fa-dot-circle-o" data-tip="Submit" /> Submit
+          <i className="fa fa-dot-circle-o" /> Submit
         </button>
         <button type="button" onClick={form.onClear}>
           <i className="fa fa-eraser" data-tip="Clear" /> Clear

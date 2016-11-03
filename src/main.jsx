@@ -15,13 +15,11 @@ import Main from './components/Main';
 momentLocalizer(moment);
 injectTapEventPlugin();
 
-const App = () => (
+render(
+
   <MuiThemeProvider>
     <Main />
-  </MuiThemeProvider>
-);
+  </MuiThemeProvider>,
 
-render(
-  <App />,
   document.querySelector('#app') // eslint-disable-line
 );

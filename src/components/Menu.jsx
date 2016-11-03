@@ -4,7 +4,7 @@ import { action } from 'mobx';
 import _ from 'lodash';
 
 import MobxReactFormDevTools from 'mobx-react-form-devtools';
-// import MobxReactFormDevTools from '../../devtools/lib';
+// import MobxReactFormDevTools from '../../devtools/src';
 
 const switchTo = action((e, menu) => {
   e.preventDefault();
@@ -13,7 +13,7 @@ const switchTo = action((e, menu) => {
   MobxReactFormDevTools.select(e.target.value);
 });
 
-const Menu = ({ data }) => (
+export default observer(({ data }) => (
   <div className="menu clearfix">
     <a
       href="https://www.npmjs.com/package/mobx-react-form"
@@ -38,10 +38,4 @@ const Menu = ({ data }) => (
       </select>
     </span>
   </div>
-);
-
-Menu.propTypes = {
-  data: React.PropTypes.object,
-};
-
-export default observer(Menu);
+));

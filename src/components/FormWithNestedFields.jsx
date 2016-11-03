@@ -1,12 +1,13 @@
 import React from 'react';
 import { observer } from 'mobx-react';
+import ReactTooltip from 'react-tooltip';
 
 const HobbiesFields = observer(({ form, hobbies }) => (
   <fieldset>
     <div className="clearfix">
       <div className="left">{hobbies.label}</div>
       <div className="right">
-        <button type="button" onClick={e => hobbies.onAdd(e)}>
+        <button type="button" onClick={hobbies.onAdd}>
           <i className="fa fa-plus-circle" data-tip="Add Hobby" />
         </button>
       </div>
@@ -54,6 +55,9 @@ const MembersFields = observer(({ form }) => (
         </button>
         <button type="button" onClick={form.$('members').onReset}>
           <i className="fa fa-refresh" data-tip="Reset All Members" />
+        </button>
+        <button type="button" onClick={form.$('members').onAdd}>
+          <i className="fa fa-plus-circle" data-tip="Add New Member" />
         </button>
       </div>
     </div>
@@ -111,6 +115,7 @@ const MembersFields = observer(({ form }) => (
 
 export default observer(({ form }) => (
   <div className="container normal">
+    <ReactTooltip />
     <form>
       <h2>Nested Fields</h2>
 

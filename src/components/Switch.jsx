@@ -7,7 +7,7 @@ import FormRegisterSimple from './FormRegisterSimple';
 import FormCompanyWidgets from './FormCompanyWidgets';
 import FormCompanySimple from './FormCompanySimple';
 
-const Switch = ({ menu, forms }) => {
+export default observer(({ menu, forms }) => {
   switch (true) {
 
     case menu.nestedFields:
@@ -27,11 +27,4 @@ const Switch = ({ menu, forms }) => {
 
     default: return null;
   }
-};
-
-Switch.propTypes = {
-  menu: React.PropTypes.object,
-  forms: React.PropTypes.object,
-};
-
-export default observer(Switch);
+});
