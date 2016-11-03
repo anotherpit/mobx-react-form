@@ -8,9 +8,6 @@ import momentLocalizer from 'react-widgets/lib/localizers/moment';
 import 'react-widgets/lib/less/react-widgets.less';
 import 'react-select/dist/react-select.css';
 
-import 'mobx-react-form-devtools/style/devtools.css';
-// import '../devtools/style/devtools.css';
-
 import './style.css';
 
 import Main from './components/Main';
